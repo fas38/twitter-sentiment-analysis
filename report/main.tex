@@ -1,0 +1,199 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\setlength{\parskip}{0.5em}
+\usepackage[compact]{titlesec}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+            
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage{enumitem}            
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{subcaption}
+\usepackage{amsmath}
+
+\usepackage{cleveref}
+
+
+% ADD ANY ADDITIONAL PACKAGE HERE
+
+\title{\large{coreML'23}\vspace{3mm} \\  \Large{Twitter Project Report Template}  }
+% (name subject to change)\\
+
+
+
+\author{Name1 Surname1  (matriculation \# 1), Name2 Surname2  (matriculation \# 2)}
+% \date{\small{\today}}
+\date{Summer 2023}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Introduction} 
+This document serves as a template for the report of the Twitter Project. The purpose of this document is to provide clear instructions for the document format, such as the required margins, font size, and format for tables and equations. It is important that these instructions are carefully followed in order to ensure consistency in the final report.
+
+
+\subsection{Replacing Placeholder Names}
+
+Please note that the placeholder name used in the report template, 
+
+\verb+\author{Name1 Surname1  (999999999), Name2 Surname2  (88888888)}+,
+
+should be replaced with the actual names of the authors of the report and their student IDs. 
+%
+To replace the placeholder names, simply edit the line of code containing the \verb+\author+ command and replace "Name1 Surname1  (matriculation \# 1)" and "Name2 Surname2  (matriculation \# 2)" with your own names. For example, the line of code could be edited to read:
+
+\verb+\author{John Smith (999999999), Jane Doe (88888888)}+
+
+
+
+\section{Style}
+
+
+
+
+Reports submitted for the Twitter Project must adhere to the guidelines presented in this document. The report must not exceed {\bf 6} pages in length, including any figures. Additional pages are allowed only for references. \textbf{Reports that exceed the specified page limit will not be considered for grading.}
+
+
+It is essential that the formatting parameters are not modified in any way. Thus, avoid changing anything before the title, as these parameters define the format (e.g., margins) of the document and the required packages.
+
+
+The use of an academic writing style is strongly encouraged in the report. This includes proper citation of sources and the use of formal language. The report should be clear, concise, and free of grammatical and spelling errors.
+
+
+
+\section{Citations, Footnotes, Figures, Tables and Equations}
+\subsection{Citations}
+
+In order to maintain consistency throughout the report, citations should be numeric, such as in the following example: `BERT is a large language model (LLM) developed by Google \cite{Devlin2019BERTPO}.'. This format ensures that the source is clearly identified and allows for ease of reference.
+
+
+\subsection{Footnotes}
+
+While footnotes can provide additional information, they should be used sparingly in order to maintain the readability and flow of the report. If a footnote is necessary, indicate it in the text using a superscript number, such as in the following example.\footnote{Sample of the first footnote.}
+%
+Place the footnotes at the bottom of the page on which they appear. Note that footnotes are properly typeset \emph{after} punctuation marks.\footnote{As in this example.}
+
+
+
+\subsection{Figures}
+
+Figures are an important aspect of any report, as they can help to illustrate key points and findings. It is essential that all artwork is neat, clean, and legible, as shown in \Cref{fig:example}. Figures should be numbered consecutively and the figure number and caption should always appear after the figure. The figure caption should be lowercase (except for the first word and proper nouns). There should be one line space before the figure caption and one line space after the figure.
+
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.3\textwidth]{images/placeholder-image.png}
+  \caption{Sample figure caption.}
+  \label{fig:example}
+\end{figure}
+
+\Cref{fig:example-2} provides an example of how to display multiple images side by side in a single figure. In this case, the `subfigure' environment is used to specify the width of each subfigure, and allows for multiple images to be displayed together in a cohesive manner.
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=0.9\linewidth]{images/placeholder-image.png}
+    \caption{Sample figure caption for image 1.}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=0.9\linewidth]{images/placeholder-image.png}
+    \caption{Sample figure caption for image 2.}
+  \end{subfigure}
+  \caption{Sample figure caption for both images.}
+  \label{fig:example-2}
+\end{figure}
+
+
+It is important to ensure that figures are referenced within the text and are used to support the report's key messages. Additionally, any figures or images that are not original must be properly cited, and permission for their use must be obtained as necessary.
+
+
+\subsection{Tables}
+
+
+
+Tables are an important tool for presenting complex data and information (e.g., to present empirical results) in a clear and concise manner. In order to ensure readability and consistency, all tables should be centered and legible, as shown in \Cref{sample-table}. The table number and title should always appear before the table.
+
+There should be one line space before the table title, one line space after the table title, and one line space after the table. The table title must be in sentence case, with only the first word and proper nouns capitalized. Tables should be numbered consecutively to aid in referencing and organization.
+%
+Any abbreviations or symbols used in the table should be clearly defined in a table note or in the main text. 
+
+
+\begin{table}[h]
+  \caption{Sample table title}
+  \label{sample-table}
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    \multicolumn{2}{c}{Part}                   \\
+    \cmidrule(r){1-2}
+    Name     & Description     & Size ($\mu$m) \\
+    \midrule
+    Dendrite & Input terminal  & $\sim$100     \\
+    Axon     & Output terminal & $\sim$10      \\
+    Soma     & Cell body       & up to $10^6$  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+
+\subsection{Math}
+
+
+
+To include an equation in LaTeX, there are several methods available. One common way is to use the `equation' environment or the `align' environment from the \texttt{amsmath} package.
+
+
+To create a numbered equation, the equation environment can be used as shown below:
+
+\begin{equation}
+  E = mc^2
+  \label{eq:mass-energy}
+\end{equation}
+
+This will create an equation with the formula $E = mc^2$ and a number on the right-hand side. The \verb+\label+ command is used to assign a name to the equation, which can be referenced later in the document using the \verb+\Cref+ command like \Cref{eq:mass-energy}.
+
+
+
+In case of multiple equations, the `align' environment can be used to align the equations, as shown below:
+
+\begin{align}
+  x + y &= 7  \nonumber \\ 
+  2x - y &= 1
+\end{align}
+
+
+This will create two aligned equations with a single number on the right-hand side that refers to the entire group of equations.
+
+
+\subsection{Referencing Tables, Figures, and Equations}
+
+To ensure clarity and consistency in your report, it is important to reference all tables, figures, and equations using the \verb+\Cref+ command. This command will automatically format the reference with the appropriate label, such as `Table 1', `Figure 2',  or `Equation (3)'.
+
+
+
+
+
+\bibliographystyle{abbrv}
+\bibliography{references.bib}
+
+
+\end{document}
