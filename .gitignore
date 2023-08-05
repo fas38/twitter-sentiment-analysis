@@ -167,3 +167,7 @@ embeddings
 /solutions.py
 solution_notebook_akbar.ipynb
 solution_notebook_mahi.ipynb
+dump*
+mahi*
+akbar*
+results/old/*
