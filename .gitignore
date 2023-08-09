@@ -162,3 +162,5 @@ cython_debug/
 /mlSS23
 
 /models
+
+/pretrained_models
