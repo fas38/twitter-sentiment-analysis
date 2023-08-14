@@ -164,3 +164,7 @@ cython_debug/
 /models
 
 /pretrained_models
+
+/logs
+
+/output
